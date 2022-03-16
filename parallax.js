@@ -60,6 +60,6 @@ var enableResumedownload = () => {
 };
 
 window.onload = function () {
-	doParallax();
+	// doParallax();
 	enableResumedownload();
 };
