@@ -46,10 +46,10 @@ html {
 	#parallax_container > #l3 {
 		margin-left: 2em;
 	}
-	body #welcome-section > div > div {
+	body #welcome-section > .welcome-section_header > .welcome-section_title {
 		height: 5vh;
 	}
-	body #welcome-section > div > div > ul {
+	body #welcome-section > .welcome-section_header > .welcome-section_title > ul {
 		font-size: 4rem;
 	}
 }
@@ -64,9 +64,6 @@ html {
 	body > #welcome-section {
 		width: 100%;
 	}
-	body #welcome-section > div > div {
-		height: 3vh;
-	}
 	#welcome-section > .mobile_contact {
 		display: block;
 	}
@@ -75,6 +72,9 @@ html {
 @media (max-width: 28.75em) {
 	html {
 		font-size: 55%;
+	}
+	body #welcome-section > .welcome-section_header > .welcome-section_title {
+		height: 3vh;
 	}
 }
 
@@ -116,6 +116,10 @@ ul {
 	display: none;
 }
 
+.mobile_contact > .contact_header > h2 {
+	font-size: 5rem;
+}
+
 #welcome-section {
 	display: flex;
 	flex-direction: column;
@@ -126,11 +130,11 @@ ul {
 	background: var(--blueGradient);
 }
 
-#welcome-section > div > h1 {
+#welcome-section > .welcome-section_header > h1 {
 	border-bottom: 0.2rem solid var(--solidLight);
 }
 
-#welcome-section > div > div {
+#welcome-section > .welcome-section_header > .welcome-section_title {
 	display: flex;
 	height: 7vh;
 	width: 100%;
@@ -138,7 +142,7 @@ ul {
 	overflow: hidden;
 }
 
-#welcome-section > div > div > ul {
+#welcome-section > .welcome-section_header > .welcome-section_title > ul {
 	font-size: 5rem;
 	font-weight: 200;
 	font-style: italic;
