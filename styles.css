@@ -46,9 +46,6 @@ html {
 	#parallax_container > #l3 {
 		margin-left: 2em;
 	}
-	body #welcome-section > .welcome-section_header > .welcome-section_title {
-		height: 5vh;
-	}
 	body #welcome-section > .welcome-section_header > .welcome-section_title > ul {
 		font-size: 4rem;
 	}
@@ -66,9 +63,6 @@ html {
 	}
 	#welcome-section > .mobile_contact {
 		display: block;
-	}
-	body #welcome-section > .welcome-section_header > .welcome-section_title {
-		height: 4vh;
 	}
 }
 
