@@ -64,6 +64,9 @@ html {
 	#welcome-section > .mobile_contact {
 		display: block;
 	}
+	body #welcome-section > .welcome-section_header > .welcome-section_title {
+		height: 76px;
+	}
 }
 
 @media (max-width: 28.75em) {
@@ -72,6 +75,15 @@ html {
 	}
 	body #welcome-section > .welcome-section_header > .welcome-section_title {
 		height: 4vh;
+	}
+}
+
+@media (max-height: 700px) {
+	body #welcome-section > .welcome-section_header > .welcome-section_title {
+		height: 10vh;
+	}
+	#parallax_container > #l1 {
+		margin-top: 11em;
 	}
 }
 
