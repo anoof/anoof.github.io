@@ -46,7 +46,11 @@ html {
 	#parallax_container > #l3 {
 		margin-left: 2em;
 	}
-	body #welcome-section > .welcome-section_header > .welcome-section_title > ul {
+	body
+		#welcome-section
+		> .welcome-section_header
+		> .welcome-section_title
+		> ul {
 		font-size: 4rem;
 	}
 }
@@ -170,6 +174,9 @@ ul {
 
 #welcome-section_resume {
 	margin-bottom: 100px;
+}
+
+.button-link {
 	padding: 25px;
 	border-radius: 10px;
 	font-family: "Righteous", cursive;
@@ -180,7 +187,7 @@ ul {
 	transition: 0.2s ease-in-out 0s;
 }
 
-#welcome-section_resume:hover {
+.button-link:hover {
 	transform: scale(1.1);
 	background-color: var(--blueGradient);
 	color: var(--main-text);
@@ -230,7 +237,7 @@ ul {
 .btn {
 	display: inline-block;
 	padding: 1rem 2rem;
-	border-radius: 2px;
+	margin: 2px;
 }
 
 #parallax_container {
@@ -282,6 +289,71 @@ ul {
 .title_item {
 	line-height: 65px;
 	margin: 0;
+}
+
+.pulse {
+	animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+	from {
+		transform: scale(0.9);
+	}
+	to {
+		transform: scale(1.01);
+	}
+}
+
+.elastic-spin {
+	animation: elastic-spin 1s infinite ease;
+}
+@keyframes elastic-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(720deg);
+	}
+}
+
+.gelatine {
+	animation: gelatine 0.5s infinite;
+}
+@keyframes gelatine {
+	from,
+	to {
+		transform: scale(1, 1);
+	}
+	25% {
+		transform: scale(0.9, 1.1);
+	}
+	50% {
+		transform: scale(1.1, 0.9);
+	}
+	75% {
+		transform: scale(0.95, 1.05);
+	}
+}
+
+.hithere {
+	animation: hithere 1s ease infinite;
+}
+@keyframes hithere {
+	30% {
+		transform: scale(1.1);
+	}
+	40%,
+	60% {
+		transform: rotate(-5deg) scale(1.1);
+	}
+	50% {
+		transform: rotate(5deg) scale(1.1);
+	}
+	70% {
+		transform: rotate(0deg) scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 
 @-webkit-keyframes opacity {
