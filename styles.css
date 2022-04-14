@@ -279,10 +279,10 @@ ul {
 	list-style: none;
 
 	-webkit-animation-name: change;
-	-webkit-animation-duration: 10s;
+	-webkit-animation-duration: 15s;
 	-webkit-animation-iteration-count: infinite;
 	animation-name: change;
-	animation-duration: 10s;
+	animation-duration: 15s;
 	animation-iteration-count: infinite;
 }
 
@@ -296,15 +296,15 @@ ul {
 }
 @keyframes pulse {
 	from {
-		transform: scale(0.9);
+		transform: scale(0.96);
 	}
 	to {
-		transform: scale(1.01);
+		transform: scale(1.001);
 	}
 }
 
 .elastic-spin {
-	animation: elastic-spin 1s infinite ease;
+	animation: elastic-spin 3s infinite ease;
 }
 @keyframes elastic-spin {
 	from {
@@ -316,7 +316,7 @@ ul {
 }
 
 .gelatine {
-	animation: gelatine 0.5s infinite;
+	animation: gelatine 1.5s infinite;
 }
 @keyframes gelatine {
 	from,
@@ -335,7 +335,7 @@ ul {
 }
 
 .hithere {
-	animation: hithere 1s ease infinite;
+	animation: hithere 3s ease infinite;
 }
 @keyframes hithere {
 	30% {
