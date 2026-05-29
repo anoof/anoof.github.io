@@ -1,0 +1,123 @@
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "tags": ["JavaScript", "TypeScript", "React", "HTML/CSS", "Responsive Web", "Accessibility"]
+    },
+    {
+      "category": "Backend & APIs",
+      "tags": ["Python", "Node.js", "FastAPI", "REST APIs", "SQL", "Java"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "tags": ["AWS (EC2, Lambda, S3)", "Docker", "Kubernetes", "CI/CD", "GitHub", "Bitbucket"]
+    },
+    {
+      "category": "AI & LLMs",
+      "tags": ["LangChain", "OpenAI API", "RAG", "FAISS", "HuggingFace", "Prompt Engineering"]
+    },
+    {
+      "category": "CMS Platforms",
+      "tags": ["SilverStripe", "CraftCMS", "WordPress"]
+    },
+    {
+      "category": "Delivery",
+      "tags": ["Agile", "Code Review", "Mentoring", "Stakeholder Facilitation", "Full SDLC"]
+    }
+  ],
+
+  "projects": [
+    {
+      "featured": true,
+      "name": "LexScaffold / LingoEase",
+      "icon": "🧠",
+      "image": "images/lexscaffold.png",
+      "visual_label": "RAG Pipeline",
+      "visual_sublabel": "Python · FAISS · OpenAI API",
+      "description": [
+        "Built a <strong>full-stack teacher-facing web application</strong> end-to-end: discovery, design, development, deployment, and user handover.",
+        "Built a <strong>RAG pipeline</strong> (Python, FAISS, OpenAI API) with a transparent, user-controlled frontend that educators can use to inspect and adjust outputs independently.",
+        "Designed around non-technical user needs with a focus on <strong>accessibility, usability, and reliability in production</strong>.",
+        "Evaluated outcomes using established NLP metrics (FKGL, FRE, semantic similarity); communicated findings to academic and non-technical stakeholders."
+      ],
+      "tech": ["Python", "FAISS", "OpenAI API", "RAG", "NLP", "Full Stack"],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "featured": false,
+      "name": "LLM Product Content Generator",
+      "icon": "⚙️",
+      "description": "Integrated LLM-based AI features into a production SilverStripe e-commerce site — designed, built, tested, and deployed the full feature pipeline. Reduced manual content authoring time through targeted prompt engineering and a modular automation pipeline.",
+      "tech": ["Python", "OpenAI API", "SilverStripe", "JavaScript"],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "featured": false,
+      "name": "Clinical NLP Pipeline",
+      "icon": "🏥",
+      "description": "Built and optimised natural language query systems for data retrieval and analysis at The Clinician. Designed AI-driven pipelines that transformed unstructured clinical datasets into structured formats, integrating cloud-based services for scalable processing.",
+      "tech": ["Python", "NLP", "AWS", "LLMs", "SQL"],
+      "github": "",
+      "demo": ""
+    }
+  ],
+
+  "experience": [
+    {
+      "id": "sunnyside",
+      "tab_label": "Sunny Side Up",
+      "role": "Full Stack Developer",
+      "company": "Sunny Side Up",
+      "date": "May 2025 — April 2026",
+      "location": "Wellington, NZ",
+      "bullets": [
+        "Delivered end-to-end client web projects using JavaScript/TypeScript across SilverStripe, CraftCMS, and WordPress CMS platforms.",
+        "Integrated LLM-based AI features into a production SilverStripe e-commerce site — designed, built, tested, and deployed the full feature pipeline.",
+        "Improved website performance and maintainability through modular architecture, automation tooling, and pragmatic design decisions balancing delivery speed with long-term scalability.",
+        "Collaborated closely with designers and stakeholders to shape requirements and guide technical trade-offs through to delivery."
+      ]
+    },
+    {
+      "id": "clinician",
+      "tab_label": "The Clinician",
+      "role": "AI/NLP Intern",
+      "company": "The Clinician",
+      "date": "Nov 2024 — Feb 2025",
+      "location": "Auckland (Remote)",
+      "bullets": [
+        "Built and optimised natural language query systems for data retrieval and analysis.",
+        "Reduced processing time through AI-driven pipelines, transforming unstructured datasets into structured formats.",
+        "Designed scalable AI workflows, integrating cloud-based services for efficient processing."
+      ]
+    },
+    {
+      "id": "cisco",
+      "tab_label": "Cisco",
+      "role": "Senior Software Engineer",
+      "company": "Cisco",
+      "date": "June 2018 — June 2024",
+      "location": "Bangalore (6 years)",
+      "bullets": [
+        "Implemented and deployed features across multiple security-based web applications from concept through to production deployment.",
+        "Built and deployed scalable data pipelines to process and analyse large security datasets.",
+        "Worked with cloud environments including AWS, Docker, and Kubernetes to ensure efficient and reliable application deployment.",
+        "Collaborated with QA and UX teams throughout the product lifecycle, assessing technical feasibility and resolving defects."
+      ]
+    },
+    {
+      "id": "earlier",
+      "tab_label": "Earlier",
+      "role": "Earlier Roles",
+      "company": "",
+      "date": "2014 — 2018",
+      "location": "",
+      "bullets": [
+        "<strong>J.C.Penney</strong> — Software Engineer (Jul 2017 – Feb 2018, Bangalore)",
+        "<strong>Flipkart / Keystride</strong> — Web Technologist (Apr 2016 – Jul 2017, Bangalore)",
+        "<strong>I2Play</strong> — Game Developer (May 2014 – Aug 2015, Bangalore)"
+      ]
+    }
+  ]
+}

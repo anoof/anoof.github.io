@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anoof Shaikh — Senior Full Stack Developer & AI Integration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav">
+  <span class="mobile-nav-name">Anoof Shaikh</span>
+  <button class="mobile-menu-btn" id="menuBtn">Menu</button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+  <a href="#education" onclick="closeMobileMenu()">Education</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <div class="name">Anoof Shaikh</div>
+      <div class="tagline">Senior Full Stack Developer | AI Integration</div>
+      <div class="location">Wellington, NZ</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#experience" data-section="experience">Experience</a></li>
+        <li><a href="#education" data-section="education">Education</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-social">
+      <a href="https://www.linkedin.com/in/anoofs" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/anoofs" target="_blank" rel="noopener" aria-label="GitHub">
+        <img src="icons/github.svg" alt="GitHub" />
+      </a>
+      <a href="mailto:anoofs@gmail.com" aria-label="Email">
+        <img src="icons/email.svg" alt="Email" />
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section id="hero">
+      <p class="hero-greeting">Hi, my name is</p>
+      <h1 class="hero-name">Anoof Shaikh.</h1>
+      <h2 class="hero-title">Senior Full Stack Developer with <span>AI Specialisation.</span></h2>
+      <p class="hero-desc">
+        I build and ship production web applications across the full stack: JavaScript/TypeScript, React, Python, and AWS, with additional depth in AI and LLM integration. Based in Wellington, NZ, with 8+ years of end-to-end delivery experience.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-filled">View Projects</a>
+        <a href="mailto:anoofs@gmail.com" class="btn">Get In Touch</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <!-- <p class="section-label">// 01</p> -->
+      <h2 class="section-heading">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a Senior Full Stack Developer based in Wellington, NZ, with <strong>8+ years of experience</strong> building and shipping production web applications across fintech, enterprise security, and e-commerce environments. I'm proficient in <strong>JavaScript/TypeScript, React, Python, SQL, and cloud-native architecture on AWS</strong>.
+          </p>
+          <p>
+            I bring additional depth in <strong>AI and LLM integration</strong> and have shipped production AI features alongside traditional full-stack delivery work.
+          </p>
+          <p>
+            My track record is end-to-end: clarifying requirements with stakeholders, implementing robust solutions, and maintaining high standards in production. I'm drawn to problems where thoughtful engineering makes a real difference to the people using the product.
+          </p>
+          <p>
+            Outside of code I'm interested in gaming, education technology, and how AI tools change the way people work.
+          </p>
+        </div>
+        <div class="about-avatar">
+          <div class="avatar-box">
+            <img
+              src="images/avatar.jpg"
+              alt="Anoof Shaikh"
+              class="avatar-photo"
+              onerror="this.style.display='none'; document.getElementById('avatar-initials').style.display='flex'"
+            />
+            <span class="avatar-initials" id="avatar-initials" style="display:none">AS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS — rendered from data.json -->
+    <section id="skills">
+      <!-- <p class="section-label">// 02</p> -->
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills-grid" id="skills-container"></div>
+    </section>
+
+    <!-- PROJECTS — rendered from data.json -->
+    <section id="projects">
+      <!-- <p class="section-label">// 03</p> -->
+      <h2 class="section-heading">Projects</h2>
+      <div id="projects-container"></div>
+    </section>
+
+    <!-- EXPERIENCE — rendered from data.json -->
+    <section id="experience">
+      <!-- <p class="section-label">// 04</p> -->
+      <h2 class="section-heading">Experience</h2>
+      <div class="experience-tabs" id="experience-container"></div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <!-- <p class="section-label">// 05</p> -->
+      <h2 class="section-heading">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-degree">Master of Artificial Intelligence</div>
+          <div class="edu-school">Victoria University of Wellington</div>
+          <div class="edu-date">July 2024 — November 2025 · Wellington, NZ</div>
+          <div class="edu-note">Research focus: NLP, LLMs, Data Engineering & AI Evaluation. Thesis project: LexScaffold, an RAG-based text simplification for language educators.</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-degree">Bachelor of Technology — Information Technology</div>
+          <div class="edu-school">National Institute of Technology, Karnataka</div>
+          <div class="edu-date">July 2010 — May 2014 · Surathkal, India</div>
+          <div class="edu-note">Foundation in computer science, software engineering, and information systems.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <!-- <p class="contact-overline">// 06 — What's next?</p> -->
+      <h2 class="contact-heading">Get In Touch</h2>
+      <p class="contact-desc">
+        I'm currently open to new opportunities in Wellington. Whether you have a role to discuss, a project idea, or just want to connect, my inbox is open.
+      </p>
+      <a href="mailto:anoofs@gmail.com" class="btn btn-filled">Say Hello</a>
+      <p class="contact-email">Or reach me directly at <a href="mailto:anoofs@gmail.com">anoofs@gmail.com</a></p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <span>Built by Anoof Shaikh &nbsp;·&nbsp; Wellington, NZ</span>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
