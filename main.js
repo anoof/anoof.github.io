@@ -129,16 +129,33 @@ function initObservers() {
   });
 }
 
-// Load data and render dynamic sections
-fetch('data.json')
-  .then(r => r.json())
-  .then(data => {
-    renderSkills(data.skills);
-    renderProjects(data.projects);
-    renderExperience(data.experience);
-    initObservers();
-  })
-  .catch(err => console.error('Failed to load data.json:', err));
+// In production the build script pre-renders these containers, so skip the
+// fetch. In dev (Live Server) they're empty, so fetch and render normally.
+if (document.getElementById('skills-container').children.length) {
+  // Pre-rendered by build.js — just wire up the experience tab listener
+  const tabList = document.getElementById('tabList');
+  if (tabList) {
+    tabList.addEventListener('click', ev => {
+      const btn = ev.target.closest('.tab-btn');
+      if (!btn) return;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  }
+  initObservers();
+} else {
+  fetch('data.json')
+    .then(r => r.json())
+    .then(data => {
+      renderSkills(data.skills);
+      renderProjects(data.projects);
+      renderExperience(data.experience);
+      initObservers();
+    })
+    .catch(err => console.error('Failed to load data.json:', err));
+}
 
 // Cursor glow
 const glow = document.getElementById('cursorGlow');
