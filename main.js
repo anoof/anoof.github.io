@@ -164,6 +164,28 @@ document.addEventListener('mousemove', e => {
   glow.style.top  = e.clientY + 'px';
 });
 
+// Hero art parallax — pieces drift slightly toward the cursor, deeper pieces move more
+const heroVisual = document.querySelector('.hero-visual');
+if (heroVisual) {
+  const parallaxEls = heroVisual.querySelectorAll('[data-depth]');
+  let px = 0, py = 0, parallaxRaf = null;
+
+  const applyParallax = () => {
+    parallaxEls.forEach(el => {
+      const depth = parseFloat(el.dataset.depth) || 0;
+      el.style.transform = `translate(${(px * depth).toFixed(2)}px, ${(py * depth).toFixed(2)}px)`;
+    });
+    parallaxRaf = null;
+  };
+
+  document.addEventListener('mousemove', e => {
+    const rect = heroVisual.getBoundingClientRect();
+    px = (e.clientX - rect.left) / rect.width - 0.5;
+    py = (e.clientY - rect.top) / rect.height - 0.5;
+    if (!parallaxRaf) parallaxRaf = requestAnimationFrame(applyParallax);
+  });
+}
+
 // Mobile menu
 const menuBtn    = document.getElementById('menuBtn');
 const mobileMenu = document.getElementById('mobileMenu');
