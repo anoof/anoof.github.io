@@ -462,8 +462,8 @@ section.visible {
 
 .avatar-box {
   width: 100%;
-  aspect-ratio: 1;
-  max-width: 260px;
+  /* aspect-ratio: 1; */
+  max-width: 330px;
   background: var(--bg-elevated);
   border-radius: 4px;
   display: flex;
