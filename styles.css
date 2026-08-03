@@ -127,15 +127,10 @@ a:hover { color: var(--accent); opacity: 0.8; }
 
 .sidebar-social a:hover { color: var(--accent); transform: translateY(-2px); }
 
-.sidebar-social img {
+.sidebar-social svg {
   width: 20px;
   height: 20px;
   transition: var(--transition);
-}
-
-.sidebar-social a:hover img {
-  /* shifts icon fill from --text-muted toward --accent (same hue, higher saturation/brightness) */
-  filter: saturate(2) brightness(1.4);
 }
 
 /* ── MAIN CONTENT ────────────────────────────── */
@@ -515,14 +510,10 @@ section.visible {
 
 .project-links a:hover { color: var(--accent); }
 
-.project-links img {
+.project-links svg {
   width: 18px;
   height: 18px;
   transition: var(--transition);
-}
-
-.project-links a:hover img {
-  filter: saturate(2) brightness(1.4);
 }
 
 /* ── EXPERIENCE ──────────────────────────────── */
@@ -811,14 +802,10 @@ footer {
 
 .other-project-card-links a:hover { color: var(--accent); }
 
-.other-project-card-links img {
+.other-project-card-links svg {
   width: 18px;
   height: 18px;
   transition: var(--transition);
-}
-
-.other-project-card-links a:hover img {
-  filter: saturate(2) brightness(1.4);
 }
 
 .other-project-img {
