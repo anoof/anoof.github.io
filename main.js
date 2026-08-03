@@ -177,3 +177,17 @@ window.closeMobileMenu = function () {
   mobileMenu.classList.remove('open');
   menuBtn.textContent = 'Menu';
 };
+
+// Theme toggle
+function setTheme(theme) {
+  if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  else document.documentElement.removeAttribute('data-theme');
+  localStorage.setItem('theme', theme);
+}
+
+document.querySelectorAll('.theme-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    setTheme(isDark ? 'light' : 'dark');
+  });
+});
